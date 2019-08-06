@@ -49,6 +49,14 @@ nav ul{
 li{
     list-style: none;
 }
+@media screen and (max-width:250px){
+    h1{
+        line-height: 25px;
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
 /************************************************************************************************/
 
 
@@ -66,7 +74,7 @@ h3{
 select, input{
     width: 100%;
     height: 2em;
-    border-radius: 2px;
+    border-radius: 4px;
     border: solid 1px #BEBEBE;
     color: #BEBEBE;
 }
@@ -81,17 +89,255 @@ select, input{
  option{
      padding: 0;
  }
+ .button{
+    margin: 0;
+    border: none;
+    color: #737373;
+    padding:0 12px
+ }
 button{
     width: 100%;
     height: 2em;
     margin-top: 16px;
     background-color: #333333;
     border:solid 1px #666666;
-    border-radius: 2px;
+    border-radius: 4px;
     color:#E5E5E5;
 }
-.button{
-    margin:16px 0;
+.titulo{
+    display: none;
+}
+@media (min-width: 600px) and (orientation: landscape) {
+    form{
+        height: auto;
+        border:solid 1px #666666;
+        margin: 16px; 
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 50px 100px 48px;
+        position: relative;
+    }
+    button{
+        position: absolute;
+        width: 200px;
+        top:130px;
+        right: 12px;
+    }
+    form h1{
+        height: 2em;
+        margin: 0;
+    }
+    .titulo{
+        display: initial;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        line-height: 50px;
+    }
+}
+
+@media (min-width: 600px) and (orientation: portrait){
+    header h1{
+        width: 50%;
+        text-align: left;
+        padding-left: 60px;
+    }
+    #hamburg,
+    nav ul :first-child{
+        display: none;
+        visibility: hidden;
+    }
+    nav{
+        line-height:50px; 
+        width: auto;
+        position: relative;
+    }
+    nav ul {
+        position: absolute;
+        height: 30px;
+        margin: 0;
+        top:10px;
+        right: 10px;
+        text-align: center;
+        display: initial;
+        visibility: visible;
+        display:grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 30px;
+        background-color:#FFFFFF;
+        padding: 0;
+    }
+    nav ul li{
+        color: #333333;
+        line-height: 20px;
+        margin:5px 0;
+        padding:0 10px;
+        border-right: solid 2px #D8D8D8;
+    }
+    nav ul :last-child{
+        border:none;
+    }
+
+    .container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+   }
+    form{
+        width: 90%;
+        height: auto;
+        border:solid 1px #666666;
+        margin: 16px; 
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 50px 100px auto auto auto auto auto;
+        /* position: relative; */
+    }
+    button{
+        margin-bottom:16px;
+       /*  position: absolute;
+        width: 200px;
+        top:130px;
+        right: 12px; */
+    }
+    form h1{
+        height: 2em;
+        margin: 0;
+    }
+    .titulo{
+        display: initial;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        line-height: 50px;
+    }
+    hr{
+        display: none;
+    }
+    main{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1024px){
+   header, .container{
+       padding: 0 10%;
+       box-sizing: border-box;
+   }
+    header h1{
+        width: 50%;
+        text-align: left;
+        padding-left: 60px;
+    }
+    #hamburg,
+    nav ul :first-child{
+        display: none;
+        visibility: hidden;
+    }
+    nav{
+        line-height:50px; 
+        width: auto;
+        position: relative;
+    }
+    nav ul {
+        position: absolute;
+        height: 30px;
+        margin: 0;
+        top:10px;
+        right: 10px;
+        text-align: center;
+        display: initial;
+        visibility: visible;
+        display:grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 30px;
+        background-color:#FFFFFF;
+        padding: 0;
+    }
+    nav ul li{
+        color: #333333;
+        line-height: 20px;
+        margin:5px 0;
+        padding:0 10px;
+        border-right: solid 2px #D8D8D8;
+    }
+    nav ul :last-child{
+        border:none;
+    }
+
+    .container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+   }
+    form{
+        width: 90%;
+        height: auto;
+        border:solid 1px #666666;
+        margin: 16px; 
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 50px 100px auto auto auto auto auto;
+        position: unset;
+       
+    }
+    button{
+        width: 100%;
+        margin-bottom:16px;
+        position: unset;
+    }
+    form h1{
+        height: 2em;
+        margin: 0;
+    }
+    .titulo{
+        display: initial;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        line-height: 50px;
+    }
+    hr{
+        display: none;
+    }
+    main{
+        width: 100%;
+    }
+}
+/************************************************************************************************/
+
+
+
+/* table *****************************************************************************************/
+
+hr{
+    border:solid 1px  #BEBEBE;
+    margin: 16px 12px 0;
+}
+table{
     width: 100%;
-    padding:0 12px;
+    padding: 0 12px;
+}
+
+table tr td  {
+     border-bottom:solid 2px #BEBEBE;
+    line-height: 2em;
+}
+
+tr > td:last-child{
+    text-align: right;
+    width: 40%;
+}
+table thead td{
+    font-weight:bold;
+    text-align: center;
+}
+
+
+
+
+/************************************************************************************************/
+
+
+
+/* footer *****************************************************************************************/
+footer{
+    width: 100%;
+    height: 10px;
+    margin-top:200px;
+  background-color: #333333;  
 }
