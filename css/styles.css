@@ -1,0 +1,97 @@
+/* Geral *****************************************************************************************/
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+/************************************************************************************************/
+
+
+/* header *****************************************************************************************/
+header{
+    height: 50px;
+    background-color: #E0E0E0;
+    width: 100%;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+    float: left;
+    margin: auto;
+    line-height: 50px;
+}
+nav{
+    position: relative;
+}
+#hamburg{
+    position: absolute;
+    height: 1em;
+    right: 10px;
+    top:17px;
+}
+#logo{
+    position: relative;
+    margin-left: 15px;
+    line-height: 50px;
+}
+#logo img{
+    position: absolute;
+    top: 9px;
+    height: 2em;
+    text-align: center;
+
+    
+}
+nav ul{
+    display: none;
+    visibility: hidden;
+}
+li{
+    list-style: none;
+}
+/************************************************************************************************/
+
+
+
+/* form *****************************************************************************************/
+fieldset{
+    margin: 0;
+    border: none;
+    color: #737373;
+}
+h3{
+    font-size: 1em;
+    margin: 16px 0 5px;
+}
+select, input{
+    width: 100%;
+    height: 2em;
+    border-radius: 2px;
+    border: solid 1px #BEBEBE;
+    color: #BEBEBE;
+}
+::-webkit-input-placeholder {
+    color: #BEBEBE;
+    font: 1em 'Lato',sans-serif;
+    padding: 0 0 0 10px;
+ }
+ select{
+     padding: 0 0 0 10px;
+ }
+ option{
+     padding: 0;
+ }
+button{
+    width: 100%;
+    height: 2em;
+    margin-top: 16px;
+    background-color: #333333;
+    border:solid 1px #666666;
+    border-radius: 2px;
+    color:#E5E5E5;
+}
+.button{
+    margin:16px 0;
+    width: 100%;
+    padding:0 12px;
+}
