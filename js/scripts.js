@@ -35,6 +35,13 @@ $(function () {
             $("#table").prepend("<tr><td> " + index + " </td><td>R$ " + value.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " </td></tr>");
         });
         $("#table").append("<tr><td>Total</td><td>R$ " + total.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "</td></tr>")
+    
+        //atualiza a parte de lucro e prejuizo
+        if(total >=0){
+            $("#lucro-prejuizo").html("|LUCRO|");
+        }else{
+            $("#lucro-prejuizo").html("|PREJUIZO|");
+        }
     };
     //********************************************************************************* */
 

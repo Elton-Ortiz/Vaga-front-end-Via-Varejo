@@ -108,10 +108,6 @@ select, input{
     width: 100%;
     height: 2em;
     border-radius: 4px;
-    -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
     border: solid 1px #BEBEBE;
 }
 select:focus, input:focus{
@@ -141,10 +137,7 @@ button{
     height: 2em;
     margin-top: 16px;
     border:solid 1px #666666;
-    -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  
     border-radius: 4px;
 }
 /* ***********************************************************************************/
@@ -165,18 +158,21 @@ table tr td  {
 tr:last-child > td{
     font-weight:bold;
     border-bottom: none; 
-    border-top:solid 2px #BEBEBE;
-   
+    border-top:solid 2px #BEBEBE;      
 }
 
 tr > td:last-child{
     text-align: right;
     width: 40%;
-    
 }
 table thead td{
     font-weight:bold;
     text-align: center;
+}
+main span{
+    width: auto;
+    right:12px;
+    position: absolute;
 }
 /* ***********************************************************************************/
 
@@ -202,51 +198,52 @@ table thead td{
 /*//////////////////////////////////////////////////////////////////////////////////*/
 
 @media (min-width: 600px) and (orientation: landscape) {
+/* Estrutura da página ***************************************************************/
+.container{
+    position: relative;
+}   
+main{
+    width: 55%;
+    position: absolute;
+    right: 16px;
+   
+}
+/* ***********************************************************************************/
+
 /* Estilos de títulos ***************************************************************/
-  
 .titulo{
     line-height: 50px;
     display: initial;
-    -webkit-grid-column-start: 1;
-    -moz-grid-column-start: 1;
-    -ms-grid-column-start: 1;
-    -o-grid-column-start: 1;
-    grid-column-start: 1;
-    -webkit-grid-column-end: 4;
-    -moz-grid-column-end: 4;
-    -ms-grid-column-end: 4;
-    -o-grid-column-end: 4;
-    grid-column-end: 4;
 }
 /* ***********************************************************************************/
 /* Formulários ***************************************************************/
 form{
+    width: 40%;
     height: auto;
     border:solid 1px #666666;
+    float: left;
     margin: 16px; 
-    display: grid;
-    -webkit-grid-template-columns: 1fr 2fr 1fr;
-  -moz-grid-template-columns: 1fr 2fr 1fr;
-  -ms-grid-template-columns: 1fr 2fr 1fr;
-  -o-grid-template-columns: 1fr 2fr 1fr;
-  grid-template-columns: 1fr 2fr 1fr;
-  -webkit-grid-template-rows: 50px 100px 48px;
-  -moz-grid-template-rows: 50px 100px 48px;
-  -ms-grid-template-rows: 50px 100px 48px;
-  -o-grid-template-rows: 50px 100px 48px;
-  grid-template-rows: 50px 100px 48px;
-    position: relative;
+    display: block;
+   
 }
 button{
-    width: 200px;
-    position: absolute;
-    top:130px;
-    right: 12px;
+    width: 100%;
+    margin-bottom: 16px;
+   
 }
 form h1{
     height: 2em;
     margin: 0;
 }
+hr{
+    display: none;
+}
+/* rodapé ****************************************************************************/
+footer{
+    margin-top:500px;
+}
+/* ***********************************************************************************/
+
 /* ***********************************************************************************/   
 }
 /*//////////////////////////////////////////////////////////////////////////////////*/
@@ -255,13 +252,21 @@ form h1{
 @media (min-width: 600px) and (orientation: portrait){
 /* Estrutura da página ***************************************************************/
 .container{
-    display: grid;
-    grid-template-columns: 40% 60%;
-   }
-   main{
-    width: 100%;
+    position: relative;
+}   
+main{
+    width: 55%;
+    position: absolute;
+    right: 16px;
+   
 }
 /* ***********************************************************************************/
+/* rodapé ****************************************************************************/
+footer{
+    margin-top:500px;
+}
+/* ***********************************************************************************/
+
 /* Estilos de títulos ***************************************************************/
 header h1{
     text-align: left;
@@ -270,8 +275,6 @@ header h1{
 }
 .titulo{
     display: initial;
-    grid-column-start: 1;
-    grid-column-end: 2;
     line-height: 50px;
 }
 /* ***********************************************************************************/
@@ -287,25 +290,23 @@ nav{
     position: relative;
 }
 nav ul {
+    line-height: 30px;
     text-align: center;
     background-color:#FFFFFF;
     width: auto;
     height: 30px;
     margin: 0;
     padding: 0;
-    display: initial;
+    display: inline-block;
     visibility: visible;
-    display:grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 30px;
     position: absolute;
     top:10px;
     right: 10px;
 
 }
 nav ul li{
+    display: inline;
     color: #333333;
-    line-height: 20px;
     border-right: solid 2px #D8D8D8;
     margin:5px 0;
     padding:0 10px;
@@ -316,13 +317,12 @@ nav ul :last-child{
 /* ***********************************************************************************/
 /* Formulários ***************************************************************/
 form{
-    width: 90%;
+    width: 40%;
     height: auto;
     border:solid 1px #666666;
+    float: left;
     margin: 16px; 
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 50px 100px auto auto auto auto auto;
+    display: block;
 }
 button{
     margin-bottom:16px;
@@ -348,13 +348,14 @@ hr{
         padding: 0 10%;
         box-sizing: border-box;
     }
-.container{
-    display: grid;
-    grid-template-columns: 40% 60%;
-   }
-   main{
-    width: 100%;
-}
+    .container{
+        position: relative;
+    }   
+    main{
+        width: 55%;
+        position: absolute;
+        right: 16px;     
+    }
 /* ***********************************************************************************/
 /* Estilos de títulos ***************************************************************/
 header h1{
@@ -364,20 +365,15 @@ header h1{
 }
 .titulo{
     line-height: 50px;
-    display: initial;
-    -webkit-grid-column-start: 1;
-  -moz-grid-column-start: 1;
-  -ms-grid-column-start: 1;
-  -o-grid-column-start: 1;
-  grid-column-start: 1;
-  -webkit-grid-column-end: 2;
-  -moz-grid-column-end: 2;
-  -ms-grid-column-end: 2;
-  -o-grid-column-end: 2;
-  grid-column-end: 2;
+   
 }
 /* ***********************************************************************************/
-/* Navegação ***************************************************************/
+/* rodapé ****************************************************************************/
+footer{
+    margin-top: 600px;
+}
+/* ***********************************************************************************/
+/* Navegação *************************************************************************/
 #hamburg,
     nav ul :first-child{
         display: none;
@@ -389,33 +385,23 @@ header h1{
         position: relative;
     }
     nav ul {
+        line-height: 30px;
         text-align: center;
+        background-color:#FFFFFF;
         width: auto;
         height: 30px;
         margin: 0;
         padding: 0;
-        display: initial;
+        display: inline-block;
         visibility: visible;
-        display:grid;
-        -webkit-grid-template-columns: auto auto auto;
-  -moz-grid-template-columns: auto auto auto;
-  -ms-grid-template-columns: auto auto auto;
-  -o-grid-template-columns: auto auto auto;
-  grid-template-columns: auto auto auto;
-  -webkit-grid-template-rows: 30px;
-  -moz-grid-template-rows: 30px;
-  -ms-grid-template-rows: 30px;
-  -o-grid-template-rows: 30px;
-  grid-template-rows: 30px;
-        background-color:#FFFFFF;
         position: absolute;
         top:10px;
         right: 10px;
-
+    
     }
     nav ul li{
+        display: inline;
         color: #333333;
-        line-height: 20px;
         border-right: solid 2px #D8D8D8;
         margin:5px 0;
         padding:0 10px;
@@ -427,22 +413,11 @@ header h1{
 /* Formulários ***********************************************************************/
 
 form{
-    width: 90%;
+    width: 40%;
     height: auto;
     border:solid 1px #666666;
     margin: 16px; 
-    display: grid;
-    -webkit-grid-template-columns: 1fr;
-    -moz-grid-template-columns: 1fr;
-    -ms-grid-template-columns: 1fr;
-    -o-grid-template-columns: 1fr;
-    grid-template-columns: 1fr;
-    -webkit-grid-template-rows: 50px 100px auto auto auto auto auto;
-    -moz-grid-template-rows: 50px 100px auto auto auto auto auto;
-    -ms-grid-template-rows: 50px 100px auto auto auto auto auto;
-    -o-grid-template-rows: 50px 100px auto auto auto auto auto;
-    grid-template-rows: 50px 100px auto auto auto auto auto;
-    position: unset;
+  
    
 }
 button{
