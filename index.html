@@ -19,8 +19,8 @@
         <h1>Controle financeiro</h1>
         <nav>
             <img id="hamburg" src="img/hamburg.png" alt="">
-            <ul>
-                <li>x</li>
+            <ul id="lista" >
+                <li class="fechar">x</li>
                 <li>Resumo</li>
                 <li>Dashboard</li>
                 <li>Configurações</li>
@@ -32,27 +32,27 @@
         <h1 class="titulo" >Nova transação</h1>
         <fieldset>
             <h3>Tipo de transação</h3>
-            <select>
+            <select id="select">
                 <option>Venda</option>
                 <option>Compra</option>
             </select>
         </fieldset>
         <fieldset>
             <h3>Nome da mercadoria</h3>
-            <input placeholder="Input">
+            <input id="mercadoria" placeholder="Input" required>
         </fieldset>
         <fieldset>
             <h3>Valor</h3>
-            <input placeholder="R$ 0,00">
+            <input id="valor" placeholder="R$ 0,00" type="number" required>  
         </fieldset>
         <div class="button">
-            <button>Adicionar transação</button>
+            <button type="button">Adicionar transação</button>
         </div>
     </form>
     <hr>
     <main>
         <h1>Extrato de transações</h1>
-        <table  cellpadding="0" cellspacing="0">
+        <table id="table" cellpadding="0" cellspacing="0">
             <thead>
                 <td>Mercadoria</td>
                 <td>Valor</td>
@@ -77,8 +77,9 @@
     </footer>
 
 
-
-
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	
 
 </body>
 
